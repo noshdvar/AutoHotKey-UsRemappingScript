@@ -1,3 +1,11 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; AutoHotKey Script                                      ;
+; Deutsche Umlaute auf den jeweiligen Buchstaben         ;
+; Ergänzungen der \ Taste als Enter-Taste                ;
+; Nutzung von Rshift zum Umschalten der Funktionalitäten ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 Rshift & a::
 {
   GetKeyState, state, Lshift
