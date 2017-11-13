@@ -79,6 +79,24 @@ Rshift & \::
   return
 }
 
+; Selbiges machen wir für das Fragezeichen.
+:*:-::
+{
+  sendinput, {?}
+  return
+}
+
+; Und auch hier stellen wir die eigentliche Funktion wieder über Rshift zur Verfügung
+Rshift & -::
+{
+  GetKeyState, state, Lshift
+  if state = D
+    sendinput, -
+  else
+    sendinput, _
+  return
+}
+
 ;Fuer meine Lieblingssmileys
 :*:``::
 {
