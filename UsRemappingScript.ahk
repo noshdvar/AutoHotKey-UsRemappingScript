@@ -60,6 +60,15 @@ Rshift & q::
   return
 }
 
+; Falls man das US International Layout hat, kann man die Tasta über dem Enter auch als
+; Enter-Taste benutzen.
+:*:\::
+{
+  sendinput, {ENTER}
+  return
+}
+
+; Die reguläre Funktion wird hier dann mit dem Rshift wieder zur Verfügung gestellt.
 Rshift & \::
 {
   GetKeyState, state, Lshift
@@ -67,12 +76,6 @@ Rshift & \::
     sendinput, |
   else
     sendinput, \
-  return
-}
-
-:*:\::
-{
-  sendinput, {ENTER}
   return
 }
 
