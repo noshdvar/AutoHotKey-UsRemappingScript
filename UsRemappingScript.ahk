@@ -103,3 +103,14 @@ Rshift & -::
   sendinput, {^}
   return
 }
+
+:?C*:`" :: ; Turn "{Space} into neutral ", else " will be used in next vowel.
+    Send, +{'}{Space}{BackSpace}
+Return
+
+:?C*:`"a::ä
+:?C*:`"o::ö
+:?C*:`"u::ü
+:?C*:`"A::Ä
+:?C*:`"O::Ö
+:?C*:`"U::Ü
