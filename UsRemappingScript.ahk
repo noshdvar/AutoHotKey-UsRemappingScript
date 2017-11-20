@@ -16,6 +16,13 @@ Rshift & a::
   return
 }
 
+
+Ralt & o::
+{
+  sendinput, ø
+  return
+}
+
 Rshift & o::
 {
   GetKeyState, state, Lshift
@@ -114,3 +121,13 @@ Return
 :?C*:`"A::Ä
 :?C*:`"O::Ö
 :?C*:`"U::Ü
+
+:?C*:' :: ; Turn '{Space} into neutral ', else ' will be used in next vowel.
+    Send, {'}{Space}{BackSpace}
+Return
+
+:?C*:ss\::ß
+:?C*:ae\::æ
+:?C*:AE\::Æ
+:?C*:oe\::œ
+:?C*:OE\::Œ
