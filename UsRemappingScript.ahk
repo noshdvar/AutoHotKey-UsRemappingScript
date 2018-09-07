@@ -70,6 +70,18 @@ Rshift & e::
   return
 }
 
+Ralt & e::
+{
+  sendinput, €
+  return
+}
+
+Lalt & e::
+{
+  sendinput, €
+  return
+}
+
 Ralt & q::
 {
   sendinput, @
