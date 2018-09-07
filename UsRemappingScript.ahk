@@ -16,10 +16,25 @@ Rshift & a::
   return
 }
 
-
 Ralt & o::
 {
-  sendinput, ø
+  GetKeyState, state, Lshift
+  if state = D
+    sendinput, Ø
+  else
+    sendinput, ø  
+  return
+}
+
+Ralt & p::
+{
+  sendinput, ¶
+  return
+}
+
+Ralt & m::
+{
+  sendinput, µ
   return
 }
 
@@ -67,6 +82,12 @@ Rshift & q::
   return
 }
 
+Rshift & 4::
+{
+  sendinput, §
+  return
+}
+
 ; Falls man das US International Layout hat, kann man die Tasta über dem Enter auch als
 ; Enter-Taste benutzen.
 :*:\::
@@ -86,48 +107,10 @@ Rshift & \::
   return
 }
 
-; Selbiges machen wir für das Fragezeichen.
-:*:-::
-{
-  sendinput, {?}
-  return
-}
-
 ; Und auch hier stellen wir die eigentliche Funktion wieder über Rshift zur Verfügung
-Rshift & -::
-{
-  GetKeyState, state, Lshift
-  if state = D
-    sendinput, -
-  else
-    sendinput, _
-  return
-}
-
 ;Fuer meine Lieblingssmileys
 :*:``::
 {
   sendinput, {^}
   return
 }
-
-:?C*:`" :: ; Turn "{Space} into neutral ", else " will be used in next vowel.
-    Send, +{'}{Space}{BackSpace}
-Return
-
-:?C*:`"a::ä
-:?C*:`"o::ö
-:?C*:`"u::ü
-:?C*:`"A::Ä
-:?C*:`"O::Ö
-:?C*:`"U::Ü
-
-:?C*:' :: ; Turn '{Space} into neutral ', else ' will be used in next vowel.
-    Send, {'}{Space}{BackSpace}
-Return
-
-:?C*:ss\::ß
-:?C*:ae\::æ
-:?C*:AE\::Æ
-:?C*:oe\::œ
-:?C*:OE\::Œ
